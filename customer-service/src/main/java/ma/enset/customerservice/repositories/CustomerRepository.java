@@ -1,4 +1,10 @@
 package ma.enset.customerservice.repositories;
 
-public interface CustomerRepository extends org.springframework.data.jpa.repository.JpaRepository<ma.enset.customerservice.entities.Customer, java.lang.String> {
+import ma.enset.customerservice.entities.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer, String> {
+
 }

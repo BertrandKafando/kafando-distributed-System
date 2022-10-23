@@ -1,6 +1,7 @@
 package ma.enset.customerservice.services.impl;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import ma.enset.customerservice.dtos.CustomerDto;
 import ma.enset.customerservice.entities.Customer;
 import ma.enset.customerservice.mappers.CustomerMapper;
@@ -14,11 +15,11 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
 
-    CustomerRepository customerRepository;
-    CustomerMapper mapper;
+    final private CustomerRepository customerRepository;
+    final private CustomerMapper mapper;
 
     @Override
     public CustomerDto getCustomerById(String id) {

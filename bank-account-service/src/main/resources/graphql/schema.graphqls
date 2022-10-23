@@ -1,0 +1,23 @@
+type Query{
+  getaccoutns:[BankAccounts],
+  getAccountById(id: String):BankAccounts
+}
+
+type Mutation{
+  createAccount(account: BankAccountInput):BankAccounts
+}
+
+type BankAccounts{
+  id : String,
+  balance : Float ,
+  currency : String ,
+  accountType : String ,
+}
+
+input BankAccountInput{
+  id : String,
+  balance : Float ,
+  currency : String ,
+  accountType : String ,
+}
+

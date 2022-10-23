@@ -1,4 +1,9 @@
 package ma.enset.walletservice.repositories;
 
-public interface WalletRepository extends org.springframework.data.jpa.repository.JpaRepository<ma.enset.walletservice.entities.Wallet, java.lang.String> {
+import ma.enset.walletservice.entities.Wallet;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface WalletRepository extends JpaRepository<Wallet, String> {
 }

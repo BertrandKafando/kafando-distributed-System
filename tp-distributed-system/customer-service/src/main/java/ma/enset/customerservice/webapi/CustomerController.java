@@ -1,6 +1,7 @@
 package ma.enset.customerservice.webapi;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import ma.enset.customerservice.dtos.CustomerDto;
 import ma.enset.customerservice.exceptions.NotFoundException;
 import ma.enset.customerservice.services.CustomerService;
@@ -10,11 +11,11 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Transactional
 @RequestMapping("/api/customers")
 public class CustomerController {
-    private CustomerService customerService;
+    final private CustomerService customerService;
     @PostMapping
     public CustomerDto save(@RequestBody CustomerDto customerDto){
         return customerService.save(customerDto);
