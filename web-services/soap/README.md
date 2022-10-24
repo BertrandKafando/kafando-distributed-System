@@ -14,8 +14,16 @@
 ![img_2.png](img_2.png)
 
     4- Test du webservice SOAP sur soapUI
+![img_10.png](img_10.png)
 
+getCompte
+![img_8.png](img_8.png)
 
+conversionEuroToDh
+![img_9.png](img_9.png)
+
+listComptes
+![img_11.png](img_11.png)
 
     5-Test du webservice SOAP sur le client java
 
