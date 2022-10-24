@@ -37,6 +37,19 @@ listComptes
 
 
 
+    6- Test du webservice SOAP sur le client PHP
+code du client
+![img_12.png](img_12.png)
+
+test du client
+
+![img_13.png](img_13.png)
+
+
+       7-Déployer le Web Service dans un Projet Spring Boot
+
+
+
 
 
    
