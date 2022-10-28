@@ -6,9 +6,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-/**
- * A DTO for the {@link ma.enset.customerservice.entities.Customer} entity
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

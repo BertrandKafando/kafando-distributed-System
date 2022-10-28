@@ -1,10 +1,7 @@
 package ma.enset.billingservice.services;
-
 import ma.enset.billingservice.dtos.InvoiceRequestDTO;
 import ma.enset.billingservice.dtos.InvoiceResponseDTO;
-
 import java.util.List;
-
 public interface InvoiceService {
     InvoiceResponseDTO save(InvoiceRequestDTO invoiceDto);
     InvoiceResponseDTO getInvoiceById(String id);
