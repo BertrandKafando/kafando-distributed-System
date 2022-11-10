@@ -1,4 +1,4 @@
-# create a micro-service architecture with hot configuration
+# Architectures Micro services avec (Spring Cloud Config, Consul Discovery, Consul Config,Vault)
 
                          Use case : Creation of e-commerce application based on micro-service Architecture
 
