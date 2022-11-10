@@ -62,9 +62,5 @@ public class GatewayServiceApplication {
     <img src="./imgs/1.png">
 </p>
 
-* The gateway routes successfully the request :
-<p align="center">
-    <img src="./imgs/2.png">
-</p>
 
 <br>

@@ -124,3 +124,23 @@ public interface CustomerInfo {
 [📦 CustomerInfo.java ](./src/main/java/com/example/customerservice/projections/CustomerInfo.java)
 
 <br>
+
+
+
+# Test the app :
+
+* after starting the app to get it registred on consul, you can test it with postman or curl :
+
+<p align="center">
+    <img src="./imgs/3.png">
+</p>
+
+<br>
+
+* The gateway routes successfully the request :
+
+<p align="center">
+    <img src="./imgs/4.png">
+</p>
+
+<br>

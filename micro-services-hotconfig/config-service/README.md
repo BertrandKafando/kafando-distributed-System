@@ -49,7 +49,7 @@ public class ConfigServiceApplication {
 [📦 ConfigServiceApplication.java ](./src/main/java/com/example/configservice/ConfigServiceApplication.java)
 
 
-##Test :
+# Test the app :
 
 -> get customer-service config file from config-service
 
@@ -64,3 +64,10 @@ curl http://localhost:8888/customer-service/default
 
 <br>
 
+* after starting the app to get it registred on consul, you can test it with postman or curl :
+
+<p align="center">
+    <img src="./imgs/3.png">
+</p>
+
+<br>

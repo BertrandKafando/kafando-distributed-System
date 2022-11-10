@@ -1,5 +1,6 @@
 package ma.enset.orderservice.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,6 +26,7 @@ public class ProductItem {
     private double discount;
     @ManyToOne
     @JoinColumn(name = "order_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Order order;
     public double getAmount(){
         return price*quantity*(1-discount);
