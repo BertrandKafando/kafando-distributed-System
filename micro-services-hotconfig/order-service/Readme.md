@@ -53,3 +53,76 @@ spring.h2.console.enabled=true
 </p>
 
 <br>
+
+
+
+## Feign Logs
+
+* add to properties file :
+```
+logging.level.ma.enset.orderservice.services.CustomerRestClientService=debug
+logging.level.ma.enset.orderservice.services.InventoryRestClientService=debug
+feign.client.config.default.loggerLevel=full
+```
+* run the app and check the logs :
+```
+ {
+  "_embedded" : {
+    "customers" : [ {
+      "name" : "Bertrand",
+      "id" : 1,
+      "email" : "bert@gmail.com",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8081/customers/1"
+        },
+        "customer" : {
+          "href" : "http://localhost:8081/customers/1{?projection}",
+          "templated" : true
+        }
+      }
+    }, {
+      "name" : "Hassan",
+      "id" : 2,
+      "email" : "hasan@gmail.com",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8081/customers/2"
+        },
+        "customer" : {
+          "href" : "http://localhost:8081/customers/2{?projection}",
+          "templated" : true
+        }
+      }
+    }, {
+      "name" : "IMane",
+      "id" : 3,
+      "email" : "imane@gmail.com",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8081/customers/3"
+        },
+        "customer" : {
+          "href" : "http://localhost:8081/customers/3{?projection}",
+          "templated" : true
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8081/customers?projection=fullCustomer"
+    },
+    "profile" : {
+      "href" : "http://localhost:8081/profile/customers"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 3,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
+```
+

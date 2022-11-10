@@ -14,25 +14,27 @@
 
 ## Creating the micro-services
 
-[👉 Creating config -service (& dockerizing it)](./config-service/)
+[👉 Creating config -service ](./config-service/)
 
 
-[👉 Creating Customer micro-service (& dockerizing it)](./customer-service)
+[👉 Creating Customer micro-service ](./customer-service)
 
 
-[👉 Creating inventory micro-service (& dockerizing it)](./inventory-service/)
+[👉 Creating inventory micro-service](./inventory-service/)
 
 
-[👉 Creating Billing micro-service (& dockerizing it)](./billing-service)
+[👉 Creating Billing micro-service](./billing-service)
 
 
-[👉 Creating GateWay micro-service (& dockerizing it)](./gateway-service/)
+[👉 Creating GateWay micro-service ](./gateway-service/)
 
-[👉 Creating order service (& dockerizing it)](./order-service)
+[👉 Creating order service](./order-service)
 
 <br>
 
-# Installation & Starting of consul
+# Installation & Use of consul
+
+
 
 ```
 > Download consul from [here](https://www.consul.io/downloads.html)
@@ -44,5 +46,69 @@
 </p>
 
 <br>
+
+* Use of consul discovery service to register micro-services to consul
+
+> run consul 
+>a. Add to pom.xml
+```
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+</dependency>
+```
+
+* Use of Consul Config to get config from consul -hot reload without restarting the app and manually actuator refresh
+
+> run consul
+> a. Add to pom.xml
+```
+<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-config</artifactId>
+</dependency>
+```
+
+> b. Add to application.properties
+
+```
+spring.config.import=optional:consul:
+```
+> c.Creation of config files on consul with key/value pairs
+
+<p align="center">
+    <img src="./imgs/2.png">
+</p>
+
+<br>
+
+<p align="center">
+    <img src="./imgs/2.png">
+</p>
+
+[👉 Test on billing-service](./billing-service/Readme.md)
+
+
+
+# Installation & Use of vault = management of secrets
+
+```
+> Download vault from [here](https://www.vaultproject.io/downloads)
+> Extract and excute with command : vault server -dev
+> Get access to vault on localhost with port 8200 by default 
+```
+
+* Run mode dev : vault server -dev
+
+* get acces to vault with token : vault login
+
+<p align="center">
+    <img src="./imgs/3.png">
+</p>
+
+<br>
+
+[👉 Test on billing-service](./billing-service/Readme.md)
+
 
 
