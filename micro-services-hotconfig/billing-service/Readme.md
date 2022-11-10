@@ -171,6 +171,7 @@ vaultTemplate.opsForVersionedKeyValue("secret")
 }
 
 ```
+
 <p align="center">
     <img src="./imgs/5.png">
 </p>
