@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import javax.management.MXBean;
 
 @SpringBootApplication
+//add this annotation to enable the configuration properties
 @EnableConfigurationProperties(RSAKeyConfig.class)
 public class SecurityServiceApplication {
 
