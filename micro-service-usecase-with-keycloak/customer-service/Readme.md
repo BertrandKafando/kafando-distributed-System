@@ -80,6 +80,8 @@ public interface CustomerInfo {
 
 ```
 <br>
+* tester a travers le gateway-service
+
 <p align="center">
     <img src="./imgs/1.png">
 </p>
