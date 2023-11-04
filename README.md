@@ -1,3 +1,7 @@
 # kafando-distributed-System
 
-Distributed Sytem and Big Data Processing
+>Distributed Sytem 
+>Big Data Processing
+>k8s
+>Docker-compose
+>Java
